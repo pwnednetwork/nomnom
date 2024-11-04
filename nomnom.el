@@ -166,10 +166,6 @@ where OPERATOR can be 'x' or '+'."
     (nomnom-mode 1)))
 
 
-
-
-
-
 (add-hook 'find-file-hook #'nomnom-mode-maybe)
 
 ;; Note about keybindings:

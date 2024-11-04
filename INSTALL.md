@@ -2,7 +2,7 @@
 
 ## Only for Doom Emacs for now
 
-1. Clone repo and make a soft link to ~/.doom/config/local/nomnom/nomnom.el
+Step 1. Clone repo and make a soft link to ~/.doom/config/local/nomnom/nomnom.el
 
 ``` sh
 cd ~/
@@ -14,10 +14,7 @@ ln -s ~/git/nomnom/nomnom.el ~/.doom/config/local/nomnom/nomnom.el
 
 ```
 
-2. **Modify Doom files:**
-
-File: **config.el**
-
+Step 2. **Modify Doom files:**
 
 ``` emacs-lisp
 ;; nomnom
@@ -41,11 +38,10 @@ File: **config.el**
 
 File: **packages.el**
 
-
 ``` emacs-lisp
 (package! nomnom
   :recipe (:host nil :repo nil :local-repo "local/nomnom"))
 
 ```
 
-3. **doom sync** and restart Emacs or **SPC h r r**
+Step 3. **doom sync** and restart Emacs or **SPC h r r**
