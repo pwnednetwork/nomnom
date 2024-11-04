@@ -1,41 +1,51 @@
-= Install Guide
+# Install Guide
 
-** Only for Doom Emacs for now **
+## Only for Doom Emacs for now
 
-Clone repo and make a soft link to ~/.doom/config/local/calc-cal/calc-cal.el
+1. Clone repo and make a soft link to ~/.doom/config/local/nomnom/nomnom.el
 
-Modify Doom files:
+``` sh
+cd ~/
+mkdir -p git
+mkdir -p ~/.doom/config/local/nomnom/
+cd git
+git clone https://github.com/pwnednetwork/nomnom.git
+ln -s ~/git/nomnom/nomnom.el ~/.doom/config/local/nomnom/nomnom.el
 
-== config.el
+```
 
-...
-{
-;; calc-cal
-(use-package! calc-cal
-  :mode ("\\.fud\\'" . calc-cal-fud-mode)
+2. **Modify Doom files:**
+
+File: **config.el**
+
+
+``` emacs-lisp
+;; nomnom
+(use-package! nomnom
+  :mode (("\\.nom\\'" . nomnom-mode)
+         ("\\.fud\\'" . nomnom-mode))
   :init
-  (add-to-list 'auto-mode-alist '("\\.fud\\'" . calc-cal-fud-mode))
-  :commands (calc-cal calc-cal-insert-date calc-cal-fud-mode))
-
+  (add-to-list 'auto-mode-alist '("\\.nom\\'" . nomnom-mode))
+  (add-to-list 'auto-mode-alist '("\\.fud\\'" . nomnom-mode))
+  :commands (nomnom-calculate nomnom-insert-date nomnom-mode))
 
 (map! :leader
       :desc "Calculate calorie totals"
-      "c t" #'calc-cal)
+      "c t" #'nomnom)
 
 (map! :leader
       :desc "Insert current date"
-      "c i" #'calc-cal-insert-date)
-}
-...
+      "c i" #'nomnom-insert-date)
 
-== packages.el
+```
 
-...
-{
+File: **packages.el**
 
-(package! calc-cal
-  :recipe (:host nil :repo nil :local-repo "local/calc-cal"))
-}
-...
 
-Then `doom sync` and restart Emacas or SPC h r r
+``` emacs-lisp
+(package! nomnom
+  :recipe (:host nil :repo nil :local-repo "local/nomnom"))
+
+```
+
+3. **doom sync** and restart Emacs or **SPC h r r**
