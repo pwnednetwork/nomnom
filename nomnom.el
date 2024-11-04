@@ -5,13 +5,11 @@
 ;; Author: agent314
 ;; Version: 0.0.11
 ;; Package-Requires: ((emacs "27.1"))
-;; URL: https://github.com/x-agent314/nomnom
+;; URL: https://github.com/pwnednetwork/nomnom
 
 ;;; ╔══════════════════════════════════════╗
 ;;; ║    < RUNTIME::INIT_SEQUENCE >        ║
 ;;; ╚══════════════════════════════════════╝
-;;;
-;;; NOTICE: Software generated with Claude 3.5 Sonnet AI assistance and human review.
 ;;;
 ;;; PROVIDED "AS IS" WITHOUT WARRANTY. AUTHORS NOT LIABLE FOR ANY DAMAGES OR CLAIMS
 ;;; ARISING FROM USE OR IMPLEMENTATION.
