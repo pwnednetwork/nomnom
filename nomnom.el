@@ -178,6 +178,7 @@ where OPERATOR can be 'x' or '+'."
 ;; (map! :leader
 ;;       :desc "Insert current date"
 ;;       "c i" #'nomnom-insert-date)
+(require 'nomnom-preproc)
 
 (provide 'nomnom)
 ;;; nomnom.el ends here

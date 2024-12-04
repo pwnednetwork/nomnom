@@ -2,15 +2,15 @@
 
 ## Only for Doom Emacs for now
 
-Step 1. Clone repo and make a soft link to ~/.doom/config/local/nomnom/nomnom.el
+Step 1. Clone repo and make a soft link to ~/.config/doom//local/nomnom/nomnom.el
 
 ``` sh
 cd ~/
 mkdir -p git
-mkdir -p ~/.doom/config/local/nomnom/
+mkdir -p ~/.config/doom/local/nomnom/
 cd git
 git clone https://github.com/pwnednetwork/nomnom.git
-ln -s ~/git/nomnom/nomnom.el ~/.doom/config/local/nomnom/nomnom.el
+ln -s ~/git/nomnom/nomnom.el ~/.config/doom/local/nomnom/nomnom.el
 
 ```
 
