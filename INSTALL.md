@@ -2,7 +2,7 @@
 
 ## Only for Doom Emacs for now
 
-Step 1. Clone repo and make a soft link to ~/.config/doom//local/nomnom/nomnom.el
+1. Clone repo and make a soft link between .el files in git folder and ~/.config/doom/local/nomnom/
 
 ``` sh
 cd ~/
@@ -10,11 +10,17 @@ mkdir -p git
 mkdir -p ~/.config/doom/local/nomnom/
 cd git
 git clone https://github.com/pwnednetwork/nomnom.git
-ln -s ~/git/nomnom/nomnom.el ~/.config/doom/local/nomnom/nomnom.el
+cd nomnom
+./install_el  ~/.config/doom/local/nomnom/ # creates soft links between all .el files in git dir
+
+```  
 
 ```
+```
 
-Step 2. **Modify Doom files:**
+2. Modify Doom files:
+
+File: **config.el**
 
 ``` emacs-lisp
 ;; nomnom
@@ -44,4 +50,4 @@ File: **packages.el**
 
 ```
 
-Step 3. **doom sync** and restart Emacs or **SPC h r r**
+3. **doom sync** and restart Emacs or **SPC h r r**
